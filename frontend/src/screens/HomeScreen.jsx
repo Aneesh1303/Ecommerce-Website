@@ -7,10 +7,13 @@ export default function HomeScreen() {
   return (
     <>
       <Row>
+        <h1 className="font-2">Welcome to EcomHUB</h1>
         {Products.map((product) => {
-          return <Col sm={12} md={6} lg={4} xl={3}>
-            <Product product={product}/>
-          </Col>;
+          return (
+            <Col sm={12} md={6} lg={4} xl={3}>
+              <Product product={product} />
+            </Col>
+          );
         })}
       </Row>
     </>

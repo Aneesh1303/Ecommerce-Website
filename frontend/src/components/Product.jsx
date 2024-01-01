@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card, CardBody, CardImg, CardText, CardTitle } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Rating from './Rating'
+import '../assets/index.css'
 
 export default function Product({product}) {
   return (
@@ -11,10 +13,13 @@ export default function Product({product}) {
 
         <CardBody>
             <Link to={`/product/${product._id}`}>
-                <CardTitle as="div"><strong>{product.name}</strong></CardTitle>
+                <CardTitle as="div" className='product-title'><strong>{product.name}</strong></CardTitle>
             </Link>
-            <CardText as="h3">
-                ${product.price}
+            <CardText as="div">
+                <Rating value = {product.rating} text = {`${product.numReviews} reviews`}/>
+            </CardText>
+            <CardText className='mt-2' as="h3">
+                <strong>${product.price}</strong>
             </CardText>
         </CardBody>
     </Card>

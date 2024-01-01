@@ -10,7 +10,6 @@ export default function App() {
       <Header />
       <main className="py-3">
         <Container>
-          <h1 className="font-2">Welcome to EcomHUB</h1>
           <Outlet />
         </Container>
       </main>

@@ -14,9 +14,9 @@ import { LinkContainer } from "react-router-bootstrap";
 export default function Header() {
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
-        <Container>
-          <LinkContainer to="/">
+      <Navbar style={{backgroundColor: "#000"}} expand="md" collapseOnSelect>
+        <Container> 
+          <LinkContainer style={{color: '#fff'}} to="/">
             <NavbarBrand className="font-2" href="/">
               EcomHUB
             </NavbarBrand>
