@@ -60,3 +60,20 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+.select {
+  border: 1.5px solid #000;
+  font-weight: bold;
+}
+
+.select:focus {
+  border: 1.5px solid #000;
+}
+
+.option {
+  font-weight: bold;
+}
+
+.option:hover {
+  background-color: #000 !important;
+}
