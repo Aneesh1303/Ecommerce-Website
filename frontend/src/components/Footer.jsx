@@ -7,7 +7,7 @@ export default function Footer() {
     <footer>
         <Container>
             <Row>
-                <Col className='text-center py-3' style={{"fontWeight": 'bold'}}>
+                <Col className='text-center py-3' style={{fontWeight: 'bold'}}>
                 <p>EcomHUB ©️ {currentYear}</p>
                 </Col>
             </Row>

@@ -77,3 +77,13 @@ body {
 .option:hover {
   background-color: #000 !important;
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}

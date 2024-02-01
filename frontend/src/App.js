@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <>
+    <div className="footer">
       <Header />
       <main className="py-3">
         <Container>
@@ -14,6 +14,6 @@ export default function App() {
         </Container>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

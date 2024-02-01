@@ -1,4 +1,5 @@
 import {
+  Badge,
   Navbar,
   Nav,
   Container,
@@ -10,8 +11,10 @@ import {
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
+import { useSelector } from 'react-redux';
 
 export default function Header() {
+  const { cartItems } = useSelector((state) => state.cart);
   return (
     <header>
       <Navbar style={{backgroundColor: "#000"}} expand="md" collapseOnSelect>
@@ -27,6 +30,13 @@ export default function Header() {
               <LinkContainer to="/cart" style={{ color: "#fff" }}>
                 <NavLink>
                   <FaShoppingCart /> Cart
+                  {
+                    cartItems.length > 0 && (
+                      <Badge style={{marginLeft: '5px'}}>
+                        { cartItems.reduce((a, c) => a+c.qty, 0) }
+                      </Badge>
+                    )
+                  }
                 </NavLink>
               </LinkContainer>
               <LinkContainer to="/login" style={{ color: "#fff" }}>
