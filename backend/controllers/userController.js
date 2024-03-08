@@ -33,11 +33,11 @@ const authUser = asyncHandler(async (req, res) => {
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password} = req.body;
 
-    const userExists = User.findOne({ email });
+    const userExists = await User.findOne({ email });
 
     if(userExists) {
         res.status(401);
-        throw new error('User already exist');
+        throw new Error('User already exist');
     }
 
     const user = await User.create({
@@ -57,7 +57,7 @@ const registerUser = asyncHandler(async (req, res) => {
         });
     } else {
         res.status(401);
-        throw new error('Invalid user data');
+        throw new Error('Invalid user data');
     }
 });
 
@@ -90,7 +90,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
         });
     } else {
         res.status(401);
-        throw new error("User not found");
+        throw new Error("User not found");
     }
 });
 
@@ -119,7 +119,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
         });
     } else {
         res.status(401);
-        throw new error("User not found");
+        throw new Error("User not found");
     }
 });
 

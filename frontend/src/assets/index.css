@@ -78,6 +78,19 @@ body {
   background-color: #000 !important;
 }
 
+.profile-name {
+  color: #fff !important; 
+}
+
+.profile {
+  font-weight: bold;
+}
+
+.profile:hover {
+  background-color: black;
+  color: #fff;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
