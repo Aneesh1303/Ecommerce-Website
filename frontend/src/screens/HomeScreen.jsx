@@ -17,9 +17,9 @@ export default function HomeScreen() {
         <>
           <Row>
             <h1 className="font-2">Welcome to EcomHUB</h1>
-            {products.map((product) => {
+            {products.map((product, ind) => {
               return (
-                <Col sm={12} md={6} lg={4} xl={3}>
+                <Col sm={12} md={6} lg={4} xl={3} key={ind}>
                   <Product product={product} />
                 </Col>
               );

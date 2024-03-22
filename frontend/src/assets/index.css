@@ -86,8 +86,42 @@ body {
   font-weight: bold;
 }
 
+.dropdown-item.active {
+  background-color: #fff;
+  color: #000;
+}
+
 .profile:hover {
   background-color: black;
+  color: #fff;
+}
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+.form-check-input:checked {
+  background-color: black;
+  border-color: #000;
+}
+
+#table {
+  background-color: #000;
+  --bs-table-striped-bg: #fff;
+  --bs-table-active-bg: #fff;
+  --bs-table-hover-bg: #fff;
+}
+
+.details-button {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.details-button:hover {
+  border: 2px solid #000;
+  background-color: #000;
   color: #fff;
 }
 

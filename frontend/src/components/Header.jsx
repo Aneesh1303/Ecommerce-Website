@@ -60,7 +60,7 @@ export default function Header() {
               </LinkContainer>
               {userInfo ? (
                 <NavDropdown
-                  title={<span style={{color: "white", fontWeight: "bold"}}>{userInfo.name}</span>}
+                  title={<span style={{color: "white", fontWeight: "bold"}}><FaUser /> {userInfo.name}</span>}
                   id="userName"
                 >
                   <LinkContainer to="/profile" className="profile">
